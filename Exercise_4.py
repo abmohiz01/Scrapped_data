@@ -19,20 +19,51 @@ import string
 
 def code(str):
     str = (input("Enter your word :"))
+    print(str)
     app = ''
     # ran = 'abs234cdjklfksmvalkflzcm232489ifnj'
-    S = 3
+
 
     if len(str) == 3:
-        print(str)
 
-    result = ''.join((random.choice(string.ascii_lowercase) for x in range(S)))
-    # run loop until the define length
-    print(" Random string generated in Lowercase: ", result)
-    app = result + (str[-2:len(str)]) + (str[0]) + result
-    print(app)
+        '''FOR GENERATING REANDOM STRING'''
+        result = ''.join((random.choice(string.ascii_lowercase)for x in range(3)))
+        # run loop until the define length
+        print(" Random string generated in Lowercase: ", result)
+        '''FIRST WORD TO THE END  '''
+        print("Appended string :",(str[-2:len(str)]) + (str[0]))
+        '''ADDED RANDOM STRING AT FIRST AND LAST'''
+        app = result + (str[-2:len(str)]) + (str[0]) + result
+        print(app)
+    else:
+        print(str[::-1])
+
+
+def decode(str):
+
+    '''TAKING INPUT OF THE ENCODED WORD '''
+    str = (input("ENTER THE ENCODED STRING YOU RECIEVED :"))
+    print(str)
+    app = ''
+    deco = ''
+    # ran = 'abs234cdjklfksmvalkflzcm232489ifnj'
+
+    if len(str) == 3:
+        print(str[::-1])
 
     else:
+        '''REMOVING FRIST AND LAST 3 CHARACTERS'''
+        app = (str[3:-3])
+        print(app)
+        deco = app
+        '''SLICING THE STRINGS BY REMOVING LAST AND ADDING IT TO THE FIRST INDEX'''
+        decoding1 = (deco[0:-1])
+        print(f"The decoded word is :{deco[2] + decoding1}")
+
+'''CALLING FUNCTIONS'''
+code("hello")
+decode("hello")
+
 
 
 

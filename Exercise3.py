@@ -1,15 +1,15 @@
-# print("*******************************************")
-# print("           Welcome to Inbox Rupees")
-# print("*******************************************")
-# name = str(input("Enter your Name :"))
-# print("Welcome  to Win Game Sir",name)
-# raise error here
-#
-# user = str(input("Are you ready to Earn some cash. Yes/No :"))
-# if user == "yes" and "Yes":
-#     print("Lets go")
-# else:
-#     print("Come back later")
+print("*******************************************")
+print("           Welcome to Inbox Rupees")
+print("*******************************************")
+name = str(input("Enter your Name :"))
+print("Welcome  to Win Game Sir",name)
+
+
+user = str(input("Are you ready to Earn some cash. Yes/No :"))
+if user == "yes" and "Yes":
+    print("Lets go")
+else:
+    print("Come back later")
 
 
 question1 = [
@@ -38,34 +38,24 @@ for i in range(0, len(question1)):
 
     questions = question1[i]
     answers = answer1[i]
+    '''MAKING QUESTION LIST STARTING FROM 1 INDEX'''
     print(f"Question {i +1} is {questions}")
     print(f"\n\nQuestion for Rs. {levels[i]}")
-
+    '''PRINTING ANSWERS'''
     print(f"a. {answers[0]}          b. {answers[1]} ")
     print(f"c. {answers[2]}          d. {answers[3]} ")
+    '''TAKING THEIR REPLIES FROM USER'''
     reply = int(input("enter from 1 - 4"))
     if reply == 2:
         print(f"correct {answers[2]} You have won {levels[i]}")
         money = levels[i]
         continue
-    if question1 == [2]:
-        if reply == 3:
-            print(f"correct {answer1[3]} You have won {levels[i]}")
+
+
 
     else:
+
         print("Wrong")
         print(f"The amount you are taking home is: {money} ")
         break
-
-
-
-
-
-
-
-
-
-
-
-
 
